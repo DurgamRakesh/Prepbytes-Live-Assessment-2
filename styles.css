@@ -1,0 +1,104 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(241, 183, 15);
+}
+img{
+    height: 100px;
+    width: 200px;
+    float: left;
+}
+.btns{
+    margin-top: 50px;
+    margin-right: 10px;
+    height: 50px;
+    float: right;
+    display: flex;
+    align-items: flex-end;
+}
+button{
+    height: 30px;
+    margin-right: 10px;
+    background-color: rgb(78, 17, 136);
+    color: white;
+    border: 1px solid rgb(78, 17, 136);
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+}
+.b-img{
+    background-image: url(https://media.istockphoto.com/id/1363189237/photo/blue-sky-and-white-clouds-background-on-daytime.jpg?s=170667a&w=0&k=20&c=d2Mv-Nk95yNRkfAb3dy1EhdrfEQvIjpwTESCqlu_UZo=);
+    background-size: cover;
+    height: 550px;
+
+}
+.box{
+    margin-top: 3px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    font-size: 25px;
+    animation-name: my-animation;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+.box:nth-child(even){
+    background-color: green;
+}
+.box:nth-child(odd){
+    background-color: red;
+}
+.box:nth-child(1){
+    animation-timing-function: linear;
+}
+.box:nth-child(2){
+    animation-timing-function: ease;
+}
+.box:nth-child(3){
+    animation-timing-function: ease-in;
+}
+.box:nth-child(4){
+    animation-timing-function: ease-out;
+}
+.box:nth-child(5){
+    animation-timing-function: ease-in-out;
+}
+@keyframes my-animation {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(500px);
+    }
+}
+@media only screen and (min-width: 340px) and (max-width: 580px) {
+    nav{
+        height: 100px;
+    }
+    img{
+        width: 90px;
+    }
+    .btns{
+        height: 50px;
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        position: relative;
+        bottom: 110px;
+    }
+    button{
+        height: 20px;
+    }
+    @keyframes my-animation {
+        0%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(150px);
+        }
+    }
+}
